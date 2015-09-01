@@ -3,7 +3,7 @@ import {Slider, Panel} from '../penguin/penguin';
 
 class App extends React.Component {
   render() {
-    var tabs = ['Foo', 'Bar', 'Zar'];
+    var tabs = ['Foo', 'Bar', 'Zar', 'Boo'];
 
     return (
       <Slider tabs={tabs}>
@@ -15,6 +15,9 @@ class App extends React.Component {
         </Panel>
         <Panel panel={2}>
           <p>Zar</p>
+        </Panel>
+        <Panel panel={2}>
+          <p>Boo</p>
         </Panel>
       </Slider>
     );

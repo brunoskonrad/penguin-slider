@@ -35,3 +35,4 @@ npm-debug.log
 
 dist
 .sass-cache
+visual/bundle.js

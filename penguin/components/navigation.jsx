@@ -16,6 +16,13 @@ class Navigation extends React.Component {
     PenguinStore.emitTabChange(index);
   }
 
+  getStyle() {
+    const tabsLength = this.props.tabs.length;
+    return {
+      width: `${100 / (tabsLength > 3 ? 3.5 : tabsLength)}%`
+    };
+  }
+
   renderTabs() {
     return this.props.tabs.map((title, index) => {
       const navigationClass = classNames({
@@ -23,7 +30,7 @@ class Navigation extends React.Component {
         'tab--active': this.state.selected == index
       });
       return (
-        <li className={navigationClass}
+        <li className={navigationClass} style={this.getStyle()}
           onClick={this.tabClick.bind(this, index)}
           key={index}>
           {title}
