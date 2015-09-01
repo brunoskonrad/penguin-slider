@@ -1,0 +1,31 @@
+.navigation {
+  width: 100%;
+  padding: 0;
+}
+
+.tab {
+  $color-white: #fff;
+  $tab-width: 100% / 3;
+
+  width: $tab-width;
+  height: 40px;
+  padding-top: 20px;
+  background-color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 4px solid transparent;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color-white, 2);
+  }
+
+  &:active {
+    background-color: darken($color-white, 4);
+  }
+
+  &--active {
+    border-bottom: 4px solid #bf4343;
+  }
+}
